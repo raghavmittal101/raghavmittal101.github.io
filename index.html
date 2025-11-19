@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghav Mittal - Academic Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 3px solid #2c3e50;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            font-weight: 300;
+        }
+        
+        .profile-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+        
+        .profile-pic {
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-pic-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4em;
+            font-weight: bold;
+        }
+        
+        .profile-description {
+            flex: 1;
+        }
+        
+        .profile-description p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .experience-item h3, .education-item h3 {
+            margin-top: 0;
+        }
+        
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+        
+        .gpa {
+            color: #27ae60;
+            font-weight: 600;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .paper-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .paper-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .paper-authors {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+        
+        .paper-venue {
+            color: #3498db;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .links {
+            margin-top: 10px;
+        }
+        
+        .links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Raghav Mittal</h1>
+            <p class="subtitle">Researcher | Virtual Reality & Mixed Reality | Computer Vision | PhD Applicant</p>
+        </header>
+        
+        <div class="profile-section">
+            <div class="profile-pic">
+                <!-- Replace the src below with your actual profile picture URL -->
+                <div class="profile-pic-placeholder">RM</div>
+                <!-- <img src="path/to/your/profile-picture.jpg" alt="Raghav Mittal"> -->
+            </div>
+            <div class="profile-description">
+                <p>I am a researcher at TCS Research with a strong focus on Virtual Reality, Mixed Reality, and Generative AI applications for immersive environments. My work bridges the gap between cutting-edge AI technologies and intuitive 3D content creation in XR.</p>
+                
+                <p>I completed my MS (by Research) in Computer Science Engineering from IIIT Hyderabad, where I developed novel locomotion techniques for VR environments. My research interests include 3D scene composition, sketch-based shape retrieval, and multi-modal interaction in extended reality.</p>
+                
+                <p>Currently seeking PhD positions to advance research in immersive technologies and human-computer interaction. I have published multiple papers at premier venues including WACV, ISMAR, and VRST, and hold patents in VR locomotion and 3D shape retrieval.</p>
+            </div>
+        </div>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Researcher</h3>
+                <p><strong>TCS Research</strong> | <span class="date">July 2023 - Present</span></p>
+                <p>Leading research on multi-modal intuitive in-situ scene authoring in mixed reality using GenAI.</p>
+            </div>
+            
+            <div class="experience-item">
+                <h3>R&D Intern</h3>
+                <p><strong>Imaginate</strong> | <span class="date">January 2023 - June 2023</span></p>
+                <p>Developed GenAI based bot assistant in collaborative mixed reality environments.</p>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Lead Developer Intern</h3>
+                <p><strong>Validus</strong> | <span class="date">May 2022 - July 2022</span></p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>MS (by Research) in Computer Science Engineering</h3>
+                <p><strong>International Institute of Information Technology (IIIT), Hyderabad</strong> | <span class="date">2019 - 2023</span></p>
+                <p><span class="gpa">GPA: 8.8/10</span></p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Bachelor of Technology in Computer Science Engineering</h3>
+                <p><strong>NIIT University, Rajasthan</strong> | <span class="date">2014 - 2018</span></p>
+                <p><span class="gpa">GPA: 6.7/10</span></p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects and Publications</h2>
+            
+            <div class="project-item">
+                <h3>Multi-modal Intuitive In-situ Scene Authoring in Mixed Reality using GenAI</h3>
+                <p class="date">2024 - 2026 @ TCS Research</p>
+                
+                <h4>Patent</h4>
+                <div class="paper-item">
+                    <p class="paper-title">System And Method For Three-Dimensional (3D) Shape Retrieval Using Dynamic Graph-Based Representations</p>
+                    <p class="paper-authors">Lokender Tiwari, Mritunjoy Halder, Shivam Ashok Shukla, Raghav Mittal, Brojeshwar Bhowmick</p>
+                    <p class="paper-venue">Indian patent no. 202521089312, Filed in 2025</p>
+                </div>
+                
+                <h4>Publications</h4>
+                
+                <div class="paper-item">
+                    <p class="paper-title">Sketch3R: Rapid and Realistic 3D VR Sketch Creation to Shape Retrieval</p>
+                    <p class="paper-authors">Mritunjoy Halder, Shivam Ashok Shukla, Lokender Tiwari, <strong>Raghav Mittal</strong>, Brojeshwar Bhowmick</p>
+                    <p class="paper-venue">WACV 2026</p>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">GeMR: Multi-modal Interactive 3D Scene Composition in XR</p>
+                    <p class="paper-authors"><strong>Raghav Mittal</strong>, Lokender Tiwari, Shivam Ashok Shukla, Mritunjoy Halder, Brojeshwar Bhowmick</p>
+                    <p class="paper-venue">ICVGIP 2025</p>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">SketchXR: In-Headset 3D Asset Ideation with Hand-Drawn Sketches and Voice Descriptions</p>
+                    <p class="paper-authors">Shivam Ashok Shukla, <strong>Raghav Mittal</strong>, Dr. Lokender Tiwari, Brojeshwar Bhowmick</p>
+                    <p class="paper-venue">VRST 2025 Poster</p>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">InGenCo: Integrated In-Place 3D Scene Generation and Collaboration</p>
+                    <p class="paper-authors"><strong>Raghav Mittal</strong>, Lokender Tiwari, Satyam Bharadwaj, Mritunjoy Halder, Brojeshwar Bhowmick</p>
+                    <p class="paper-venue">ISMAR 2025 Poster</p>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">Fast and Accurate 3D VR Sketch to 3D Shape Retrieval</p>
+                    <p class="paper-authors">Mritunjoy Halder, Shivam Ashok Shukla, Dr. Lokender Tiwari, <strong>Raghav Mittal</strong>, Brojeshwar Bhowmick</p>
+                    <p class="paper-venue">ISMAR 2025 Poster</p>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <h3>Limitless Dynamic Path Generation For Continuous Locomotion in Virtual Reality</h3>
+                <p class="date">2020 - 2023 @ IIIT Hyderabad</p>
+                <div class="links">
+                    <a href="https://github.com/raghavmittal101/test-quest-2" target="_blank">Code</a>
+                    <a href="https://drive.google.com/file/d/1qZZTnA8bV3wyz66_67ifKmaLKoGfhWB9/view?usp=sharing" target="_blank">Thesis</a>
+                    <a href="https://www.youtube.com/watch?v=tmBYfRN74mk" target="_blank">Video</a>
+                </div>
+                
+                <h4>Patent</h4>
+                <div class="paper-item">
+                    <p class="paper-title">System and method for generating a limitless path in virtual reality environment for continuous locomotion</p>
+                    <p class="paper-authors">YR Reddy, R Mittal, SA Karre</p>
+                    <p class="paper-venue">US Patent 11,687,154 (2023)</p>
+                    <div class="links">
+                        <a href="https://patents.google.com/patent/US11687154B2/en" target="_blank">Patent</a>
+                    </div>
+                </div>
+                
+                <h4>Publications</h4>
+                
+                <div class="paper-item">
+                    <p class="paper-title">Enhancing Configurable Limitless Paths in Virtual Reality Environments</p>
+                    <p class="paper-authors"><strong>R Mittal</strong>, SA Karre, YPK Gururaj, YR Reddy</p>
+                    <p class="paper-venue">Proceedings of the 15th Innovations in Software Engineering Conference, 2022</p>
+                    <div class="links">
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3511430.3511452" target="_blank">Paper</a>
+                        <a href="https://docs.google.com/presentation/d/1RsVOxT9bR35q0PSQ-mvYPr_Ak89Qel7BMmYyLPqU1Ho/edit?usp=share_link" target="_blank">Presentation</a>
+                        <a href="https://youtu.be/LzNAuN2U3vc?si=ykxwKjUjolCszma3" target="_blank">Video</a>
+                    </div>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">Designing Limitless Path in Virtual Reality Environment</p>
+                    <p class="paper-authors"><strong>R Mittal</strong>, SA Karre, YR Reddy</p>
+                    <p class="paper-venue">13th International Conference, VAMR 2021, Part of HCII 2021</p>
+                    <div class="links">
+                        <a href="https://link.springer.com/book/10.1007/978-3-030-77599-5" target="_blank">Publication</a>
+                        <a href="https://docs.google.com/presentation/d/1iOFMVukQI8qheQzYHUDjc4XE-GNT8p5fkiJpnPrO1xI/edit?usp=share_link" target="_blank">Presentation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <h3>Customizable Head-Mounted Device Development</h3>
+                <p class="date">2021 - 2023 @ IIIT Hyderabad</p>
+                
+                <h4>Publications</h4>
+                
+                <div class="paper-item">
+                    <p class="paper-title">Towards Conducting Effective Locomotion Through Hardware Transformation in Head-Mounted-Device - A Review Study</p>
+                    <p class="paper-authors">YP Gururaj, <strong>R Mittal</strong>, SA Karre, YR Reddy, S Azeemuddin</p>
+                    <p class="paper-venue">IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops, 2022</p>
+                    <div class="links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9757514/" target="_blank">Paper</a>
+                    </div>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">Customizable Head-mounted Device for Detection of Eye Disorders using Virtual Reality</p>
+                    <p class="paper-authors">YP Gururaj, SA Karre, <strong>R Mittal</strong>, YR Reddy, S Azeemuddin</p>
+                    <p class="paper-venue">35th International Conference on VLSI Design and 21st International Conference on Embedded Systems, 2022</p>
+                    <div class="links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9885884" target="_blank">Paper</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <h3>Requirement Elicitation Methods for VR Products</h3>
+                <p class="date">2022 - 2024 @ IIIT Hyderabad</p>
+                
+                <h4>Publications</h4>
+                
+                <div class="paper-item">
+                    <p class="paper-title">RE Methods for Virtual Reality Software Product Development: A Mapping Study</p>
+                    <p class="paper-authors">SA Karre, YR Reddy, <strong>R Mittal</strong></p>
+                    <p class="paper-venue">ACM Transactions on Software Engineering and Methodology, Volume 33, Issue 4, 2024</p>
+                    <div class="links">
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3649595" target="_blank">Paper</a>
+                    </div>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">Requirements elicitation for virtual reality products - a mapping study</p>
+                    <p class="paper-authors">SA Karre, <strong>R Mittal</strong>, R Reddy</p>
+                    <p class="paper-venue">Proceedings of the 16th Innovations in Software Engineering Conference, 2023</p>
+                    <div class="links">
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3578527.3578536" target="_blank">Paper</a>
+                    </div>
+                </div>
+                
+                <div class="paper-item">
+                    <p class="paper-title">A role based model template for specifying virtual reality software</p>
+                    <p class="paper-authors">SA Karre, V Pareek, <strong>R Mittal</strong>, R Reddy</p>
+                    <p class="paper-venue">37th IEEE/ACM International Conference on Automated Software Engineering, 2022</p>
+                    <div class="links">
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3551349.3560514" target="_blank">Paper</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching">
+            <h2>Academic Services</h2>
+            <h3>Teaching</h3>
+            <ul>
+                <li>Introduction to Software Systems - Spring 2021</li>
+                <li>Software Systems and Development - Monsoon 2020</li>
+                <li>Usability Engineering - Spring 2020</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Raghav Mittal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
