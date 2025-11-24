@@ -11,6 +11,9 @@
             box-sizing: border-box;
         }
         
+        html{
+            scroll-behavior: smooth;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -91,6 +94,7 @@
         
         section {
             margin-bottom: 50px;
+            scroll-margin-top: 5rem;
         }
         
         h2 {
@@ -217,15 +221,92 @@
             h2 {
                 font-size: 1.6em;
             }
+            
+            nav a {
+                padding: 12px 15px;
+                font-size: 0.9em;
+            }
+            #about{
+                margin-top: 1rem;
+                scroll-margin-top: 6em;
+                position: relative;
+            }
+        }
+
+         @media (max-width: 480px) {
+            nav ul {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+            
+            nav a {
+                padding: 5px 5px;
+                font-size: 0.8em;
+                white-space: nowrap;
+            }
+
+            #about{
+                margin-top: 3.5rem;
+                scroll-margin-top: 6em;
+                position: relative;
+            }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #0e658892;
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(76, 75, 75, 0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            padding: 10px 10px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            background: #34495e;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#teaching">Academic Services</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <header>
+        <header id="about">
             <h1>Raghav Mittal</h1>
             <p class="subtitle"><a href="https://scholar.google.com/citations?user=_yQMq6wAAAAJ&hl=en">Scholar</a> | 
-                <a href="https://www.linkedin.com/in/raghavmittal101/">LinkedIn |</a>
+                <a subtitle href="https://www.linkedin.com/in/raghavmittal101/">LinkedIn |</a>
                 <a href="mailto:raghavmittal101@gmail.com">raghavmittal101@gmail.com</a>
         </header>
         
