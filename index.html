@@ -182,19 +182,46 @@
             font-size: 0.9em;
             font-style: italic;
         }
-        
+
         .links a {
-            display: inline-block;
+            /* display: inline-block; */
             margin-right: 5px;
             /* color: #3498db; */
             /* text-decoration: none; */
             font-size: 0.9em;
+            background: linear-gradient(180deg,  #53b1ff92, #369ad8); 
+            border-radius: 50px;
+            padding: 0.1em 0.5em;
+            color: white;
+            margin-top: 0.2em;
+            cursor: pointer;
+            text-decoration: none;
         }
         
         .links a:hover {
             text-decoration: underline;
+            background: linear-gradient(180deg,  #008cff92, #0078c3); 
         }
         
+       .icon-link::before {
+            content: "";
+            background-size: contain;
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-left: 4px;
+            margin-right: 4px;
+            background-repeat: no-repeat;
+        }
+        .icon-link[data-icon="external"]::after { background-image: url('up-right-arrow.png'); }
+        .icon-link[data-icon="poster"]::before { background-image: url('icons8-poster-30.png'); }
+        .icon-link[data-icon="paper"]::before { background-image: url('icons8-paper-50.png'); }
+        .icon-link[data-icon="presentation"]::before { background-image: url('icons8-presentation-50.png'); }
+        .icon-link[data-icon="patent"]::before { background-image: url('icons8-certificate-50.png'); }
+        .icon-link[data-icon="video"]::before { background-image: url('icons8-video-50.png'); }
+        .icon-link[data-icon="book"]::before { background-image: url('icons8-books-48.png'); }
+        .icon-link[data-icon="code"]::before { background-image: url('icons8-code-50.png'); }
+
         footer {
             text-align: center;
             padding: 30px 0;
@@ -359,7 +386,8 @@
                     <p class="paper-authors"><strong>Raghav Mittal</strong>, Lokender Tiwari, Shivam Ashok Shukla, Mritunjoy Halder, Brojeshwar Bhowmick</p>
                     <p class="paper-venue">ICVGIP 2025 <span style="color: #333;">🏆 Best Paper Award</span></p>
                     <div class="links">
-                        <a target="_blank" href="https://docs.google.com/presentation/d/e/2PACX-1vSdkyTYJId8CowtXEN16tTWpfFT0MW3qoZq4gjy-TErgn8Qqlk5Q6Rv_CyB6NkTelXyy4v25o6amdXr/pubembed?start=true&loop=true">Presentation</a>
+                        <a class="icon-link" data-icon="presentation" target="_blank" href="https://docs.google.com/presentation/d/e/2PACX-1vSdkyTYJId8CowtXEN16tTWpfFT0MW3qoZq4gjy-TErgn8Qqlk5Q6Rv_CyB6NkTelXyy4v25o6amdXr/pubembed?start=true&loop=true">Presentation</a>
+                        <a class="icon-link" data-icon="video" target="_blank" href="https://youtu.be/Fov56o7Djo8">Video</a>
                     </div>
                 </div>
                 
@@ -368,7 +396,8 @@
                     <p class="paper-authors">Shivam Ashok Shukla, <strong>Raghav Mittal</strong>, Dr. Lokender Tiwari, Brojeshwar Bhowmick</p>
                     <p class="paper-venue">VRST 2025</p>
                     <div class="links">
-                        <a target="_blank" href="https://dl.acm.org/doi/10.1145/3756884.3770540">Poster</a>
+                        <a class="icon-link" data-icon="poster" target="_blank" href="https://dl.acm.org/doi/10.1145/3756884.3770540">Poster</a>
+                        <a class="icon-link" data-icon="video" target="_blank" href="https://youtu.be/XAs-hjYfWBk">Video</a>
                     </div>
                 </div>
                 
@@ -377,7 +406,8 @@
                     <p class="paper-authors"><strong>Raghav Mittal</strong>, Lokender Tiwari, Satyam Bharadwaj, Mritunjoy Halder, Brojeshwar Bhowmick</p>
                     <p class="paper-venue">ISMAR 2025</p>
                     <div class="links">
-                        <a target="_blank" href="https://doi.ieeecomputersociety.org/10.1109/ISMAR-Adjunct68609.2025.00187">Poster</a>
+                        <a class="icon-link" data-icon="poster" target="_blank" href="https://doi.ieeecomputersociety.org/10.1109/ISMAR-Adjunct68609.2025.00187">Poster</a>
+                        <a class="icon-link" data-icon="video" target="_blank" href="https://youtu.be/oCHj3HK4iOs">Video</a>
                     </div>
                 </div>
                 
@@ -386,7 +416,7 @@
                     <p class="paper-authors">Mritunjoy Halder, Shivam Ashok Shukla, Dr. Lokender Tiwari, <strong>Raghav Mittal</strong>, Brojeshwar Bhowmick</p>
                     <p class="paper-venue">ISMAR 2025</p>
                     <div class="links">
-                        <a target="_blank" href="https://doi.ieeecomputersociety.org/10.1109/ISMAR-Adjunct68609.2025.00140">Poster</a>
+                        <a class="icon-link" data-icon="poster" target="_blank" href="https://doi.ieeecomputersociety.org/10.1109/ISMAR-Adjunct68609.2025.00140">Poster</a>
                     </div>
                 </div>
             </div>
@@ -395,9 +425,9 @@
                 <h3>Limitless Dynamic Path Generation For Continuous Locomotion in Virtual Reality</h3>
                 <p class="date">2020 - 2023 @ IIIT Hyderabad</p>
                 <div class="links">
-                    <a target="_blank" href="https://github.com/raghavmittal101/test-quest-2" target="_blank">Code</a>
-                    <a target="_blank" href="https://drive.google.com/file/d/1qZZTnA8bV3wyz66_67ifKmaLKoGfhWB9/view?usp=sharing" target="_blank">Thesis</a>
-                    <a target="_blank" href="https://www.youtube.com/watch?v=tmBYfRN74mk" target="_blank">Video</a>
+                    <a class="icon-link" data-icon="code" target="_blank" href="https://github.com/raghavmittal101/test-quest-2" target="_blank">Code</a>
+                    <a class="icon-link" data-icon="book" target="_blank" href="https://drive.google.com/file/d/1qZZTnA8bV3wyz66_67ifKmaLKoGfhWB9/view?usp=sharing" target="_blank">Thesis</a>
+                    <a class="icon-link" data-icon="video" target="_blank" href="https://www.youtube.com/watch?v=tmBYfRN74mk" target="_blank">Video</a>
                 </div>
                 
                 <h4>Patent</h4>
@@ -406,7 +436,7 @@
                     <p class="paper-authors">Y Raghu Reddy, <strong>Raghav Mittal</strong>, Sai Anirudh Karre</p>
                     <p class="paper-venue">US Patent 11,687,154 (2023)</p>
                     <div class="links">
-                        <a target="_blank" href="https://patents.google.com/patent/US11687154B2/en" target="_blank">Patent</a>
+                        <a class="icon-link" data-icon="patent" target="_blank" href="https://patents.google.com/patent/US11687154B2/en" target="_blank">Patent</a>
                     </div>
                 </div>
                 
@@ -417,9 +447,9 @@
                     <p class="paper-authors"><strong>Raghav Mittal</strong>, Sai Anirudh Karre, YPK Gururaj, Y Raghu Reddy</p>
                     <p class="paper-venue">ISEC, 2022</p>
                     <div class="links">
-                        <a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3511430.3511452" target="_blank">Paper</a>
-                        <a target="_blank" href="https://docs.google.com/presentation/d/1RsVOxT9bR35q0PSQ-mvYPr_Ak89Qel7BMmYyLPqU1Ho/edit?usp=share_link" target="_blank">Presentation</a>
-                        <a target="_blank" href="https://youtu.be/LzNAuN2U3vc?si=ykxwKjUjolCszma3" target="_blank">Video</a>
+                        <a target="_blank" class="icon-link" data-icon="paper" href="https://dl.acm.org/doi/abs/10.1145/3511430.3511452" target="_blank">Paper</a>
+                        <a target="_blank" class="icon-link" data-icon="presentation" href="https://docs.google.com/presentation/d/1RsVOxT9bR35q0PSQ-mvYPr_Ak89Qel7BMmYyLPqU1Ho/edit?usp=share_link" target="_blank">Presentation</a>
+                        <a target="_blank" class="icon-link" data-icon="video" href="https://youtu.be/LzNAuN2U3vc?si=ykxwKjUjolCszma3" target="_blank">Video</a>
                     </div>
                 </div>
                 
@@ -428,8 +458,8 @@
                     <p class="paper-authors"><strong>Raghav Mittal</strong>, Sai Anirudh Karre, Y Raghu Reddy</p>
                     <p class="paper-venue">VAMR 2021, Part of HCII 2021</p>
                     <div class="links">
-                        <a target="_blank" href="https://link.springer.com/book/10.1007/978-3-030-77599-5" target="_blank">Paper</a>
-                        <a target="_blank" href="https://docs.google.com/presentation/d/1iOFMVukQI8qheQzYHUDjc4XE-GNT8p5fkiJpnPrO1xI/edit?usp=share_link" target="_blank">Presentation</a>
+                        <a class="icon-link" data-icon="paper" target="_blank" href="https://link.springer.com/book/10.1007/978-3-030-77599-5" target="_blank">Paper</a>
+                        <a class="icon-link" data-icon="presentation" target="_blank" href="https://docs.google.com/presentation/d/1iOFMVukQI8qheQzYHUDjc4XE-GNT8p5fkiJpnPrO1xI/edit?usp=share_link" target="_blank">Presentation</a>
                     </div>
                 </div>
             </div>
@@ -445,7 +475,7 @@
                     <p class="paper-authors">YP Gururaj, <strong>Raghav Mittal</strong>, Sai Anirudh Karre, Y Raghu Reddy, S Azeemuddin</p>
                     <p class="paper-venue">IEEE VR 2022</p>
                     <div class="links">
-                        <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9757514/" target="_blank">Paper</a>
+                        <a class="icon-link" data-icon="paper" target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9757514/" target="_blank">Paper</a>
                     </div>
                 </div>
                 
@@ -454,7 +484,7 @@
                     <p class="paper-authors">YP Gururaj, Sai Anirudh Karre, <strong>Raghav Mittal</strong>, Y Raghu Reddy, S Azeemuddin</p>
                     <p class="paper-venue">VLSID 2022</p>
                     <div class="links">
-                        <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9885884" target="_blank">Paper</a>
+                        <a class="icon-link" data-icon="paper" target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9885884" target="_blank">Paper</a>
                     </div>
                 </div>
             </div>
@@ -470,7 +500,7 @@
                     <p class="paper-authors">Sai Anirudh Karre, Y Raghu Reddy, <strong>Raghav Mittal</strong></p>
                     <p class="paper-venue">ACM TOSEM, 2024</p>
                     <div class="links">
-                        <a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3649595" target="_blank">Paper</a>
+                        <a class="icon-link" data-icon="paper" target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3649595" target="_blank">Paper</a>
                     </div>
                 </div>
                 
@@ -479,7 +509,7 @@
                     <p class="paper-authors">Sai Anirudh Karre, <strong>Raghav Mittal</strong>, Raghu Reddy</p>
                     <p class="paper-venue">ISEC, 2023</p>
                     <div class="links">
-                        <a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3578527.3578536" target="_blank">Paper</a>
+                        <a class="icon-link" data-icon="paper" target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3578527.3578536" target="_blank">Paper</a>
                     </div>
                 </div>
                 
@@ -488,7 +518,7 @@
                     <p class="paper-authors">Sai Anirudh Karre, Vivek Pareek, <strong>Raghav Mittal</strong>, Raghu Reddy</p>
                     <p class="paper-venue">ASE 2022</p>
                     <div class="links">
-                        <a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3551349.3560514" target="_blank">Paper</a>
+                        <a class="icon-link" data-icon="paper" target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3551349.3560514" target="_blank">Paper</a>
                     </div>
                 </div>
             </div>
