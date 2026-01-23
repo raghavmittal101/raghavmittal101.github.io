@@ -61,13 +61,13 @@
             height: 250px;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
         }
         
         .profile-pic img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
         
         .profile-pic-placeholder {
@@ -109,7 +109,7 @@
             font-size: 1.4em;
             color: #34495e;
             margin-top: 30px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         h4 {
@@ -122,7 +122,7 @@
         
         .experience-item, .education-item, .project-item {
             margin-bottom: 15px;
-            padding: 5px;
+            padding: 5px 20px;
             background: #f8f9fa;
             border-radius: 8px;
             /* border-bottom: 4px solid #3498db; */
@@ -133,9 +133,11 @@
         }
         
         .date {
-            color: #7f8c8d;
+            color: #5a5a5a;
             font-style: italic;
             font-size: 0.95em;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
         
         .gpa {
@@ -157,9 +159,13 @@
             margin-bottom: 10px;
         }
         
+        .justify-content {
+            text-align: justify;
+        }
+
         .paper-item {
-            padding: 5px;
-            margin-bottom: 5px;
+            padding: 5px 20px;
+            margin: 5px;
             background: white;
             border-radius: 5px;
             border: 1px solid #e0e0e0;
@@ -379,14 +385,14 @@
             <div class="profile-pic">
                 <!-- Replace the src below with your actual profile picture URL -->
                 <!-- <div class="profile-pic-placeholder">RM</div> -->
-                <img src="prof_pic.jpg" alt="Raghav Mittal">
+                <img src="dp6.png" alt="Raghav Mittal">
             </div>
             <div class="profile-description">
-                <p>I am a researcher at TCS Research with a strong focus on Virtual Reality, Mixed Reality, and Generative AI applications for immersive environments. My work bridges the gap between cutting-edge AI technologies and intuitive 3D content creation in XR.</p>
+                 <p class="justify-content">I am a researcher at TCS Research with a strong focus on Virtual Reality, Mixed Reality, and Generative AI applications for immersive environments. My work bridges the gap between cutting-edge AI technologies and intuitive 3D content creation in XR.</p>
+                 
+                 <p class="justify-content">I completed my MS (by Research) in Computer Science Engineering from IIIT Hyderabad, where I developed novel locomotion techniques for VR environments. My research interests include 3D scene composition, sketch-based shape retrieval, and multi-modal interaction in extended reality.</p>
                 
-                <p>I completed my MS (by Research) in Computer Science Engineering from IIIT Hyderabad, where I developed novel locomotion techniques for VR environments. My research interests include 3D scene composition, sketch-based shape retrieval, and multi-modal interaction in extended reality.</p>
-                
-                <p>I have published multiple papers at premier venues including WACV, ISMAR, and VRST, and hold patents in VR locomotion and 3D shape retrieval.</p>
+                 <p class="justify-content">I have published multiple papers at premier venues including WACV, ISMAR, and VRST, and hold patents in VR locomotion and 3D shape retrieval.</p>
             </div>
         </div>
 
@@ -396,8 +402,13 @@
             
             <div class="project-item">
                 <h3>Multi-modal Intuitive In-situ Scene Authoring in Mixed Reality using GenAI</h3>
-                <p class="date">2024 - 2026 @ TCS Research</p>
-                
+                <p class="date">2024 - 2026 @ TCS Research, IN</p>
+                <p class="justify-content">
+                    This project focuses on developing advanced systems for creating and composing 3D scenes in extended reality (XR) environments using generative AI and multi-modal inputs. The research explores how users can intuitively author 3D content through various input modalities including sketches, audio descriptions, and gestures. Key contributions include <b>GeMR</b>, which won a <b>Best Paper Award at ICVGIP 2025</b> for its interactive 3D scene composition approach, and <b>Sketch3R</b>, which enables rapid conversion of VR sketches into retrievable 3D shapes. The project also developed <b>SketchTo3DGen</b>, allowing users to create articulation-ready 3D assets from sketches and audio inputs, and <b>InGenCo</b>, which facilitates integrated in-place 3D scene generation and collaboration. The work addresses fundamental challenges in making XR content creation more accessible through natural interaction paradigms, with innovations in sketch-based shape retrieval (<b>FAV3R</b>) that achieve fast and accurate matching between hand-drawn 3D sketches and existing 3D models.
+                </p>
+                 <p class="justify-content">
+                    Currently, I am extending this project by building AI agents which can assist users in developing new tools for 3D scene authoring in Unity.
+                </p>
                 <h4>Patent</h4>
                 <div class="paper-item">
                     <p class="paper-title">System And Method For Three-Dimensional Scene Composition In Extended Reality Through Multi-Modal Inputs</p>
@@ -460,7 +471,10 @@
             
             <div class="project-item">
                 <h3>Limitless Dynamic Path Generation For Continuous Locomotion in Virtual Reality</h3>
-                <p class="date">2020 - 2023 @ IIIT Hyderabad</p>
+                <p class="date">2020 - 2023 @ IIIT Hyderabad, IN</p>
+                 <p class="justify-content">
+                    This project addressed the fundamental challenge of enabling continuous locomotion in VR environments within limited physical spaces. The research developed a system that dynamically generates limitless paths, allowing users to walk continuously in virtual environments while remaining within constrained physical boundaries. The approach enhances configurability, enabling users to customize path parameters based on their available space and locomotion preferences. The work resulted in <b>a US patent and two publications</b> that explored both the design and enhancement of limitless path systems. The research demonstrated how dynamic path generation could reduce VR sickness, improve immersion, and provide more natural navigation experiences compared to traditional teleportation-based methods. The system's configurable nature allows adaptation to different room sizes and user preferences, making VR locomotion more accessible and comfortable for extended experiences.
+                </p>
                 <div class="links">
                     <a class="icon-link" data-icon="code" target="_blank" href="https://github.com/raghavmittal101/test-quest-2" target="_blank">Code</a>
                     <a class="icon-link" data-icon="book" target="_blank" href="https://drive.google.com/file/d/1qZZTnA8bV3wyz66_67ifKmaLKoGfhWB9/view?usp=sharing" target="_blank">Thesis</a>
@@ -503,7 +517,10 @@
             
             <div class="project-item">
                 <h3>Customizable Head-Mounted Device Development</h3>
-                <p class="date">2021 - 2023 @ IIIT Hyderabad</p>
+                <p class="date">2021 - 2023 @ IIIT Hyderabad, IN</p>
+                 <p class="justify-content">
+                    This project explored hardware innovations in head-mounted display technology for VR applications. The research investigated how hardware transformation in HMDs could enable more effective locomotion experiences, conducting a comprehensive review of existing approaches and their effectiveness. A significant contribution was the development of a customizable, inexpensive 3D-printed HMD specifically designed for detecting eye disorders using virtual reality, demonstrating how VR hardware could be adapted for medical and diagnostic applications beyond entertainment and training. 
+                </p>
                 
                 <h4>Publications</h4>
                 
@@ -528,7 +545,10 @@
             
             <div class="project-item">
                 <h3>Requirement Elicitation Methods for VR Products</h3>
-                <p class="date">2022 - 2024 @ IIIT Hyderabad</p>
+                <p class="date">2022 - 2024 @ IIIT Hyderabad, IN</p>
+                 <p class="justify-content">
+                    This project conducted systematic research on software engineering practices for virtual reality product development. Through mapping studies, the research examined how requirements elicitation methods need to be adapted for VR contexts, where spatial interaction and immersion create distinct challenges compared to traditional software. The work culminated in a publication in <b>ACM TOSEM (Transactions on Software Engineering and Methodology)</b> providing a comprehensive mapping of RE methods for VR. The research also developed a role-based model template for specifying VR software requirements, recognizing that VR systems involve multiple stakeholders who need structured ways to communicate requirements.
+                </p>
                 
                 <h4>Publications</h4>
                 
